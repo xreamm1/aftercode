@@ -1,10 +1,12 @@
 # Aftercode Desktop
 
-Aftercode is a rebranded fork of OpenCode Desktop. It keeps the upstream Electron + SolidJS desktop client and OpenCode CLI runtime, while using Aftercode app identity, icons, wordmark and UI copy. The upstream source snapshot is pinned in [UPSTREAM_VERSION.md](UPSTREAM_VERSION.md).
+Aftercode Desktop is an open-source AI coding app for Windows, macOS, and Linux. This repository contains the desktop client, its app branding, and the coding-agent runtime. The source snapshot and required license notices are documented in [UPSTREAM_VERSION.md](UPSTREAM_VERSION.md) and [LICENSE](LICENSE).
 
 ## Development
 
 Requirements: Bun 1.4.4 and the toolchain for the platform you are building on.
+
+The current public desktop installer is for Windows x64: [download Aftercode Desktop](https://github.com/xreamm1/aftercode/releases/latest).
 
 ```powershell
 bun install --frozen-lockfile --filter @opencode/desktop
@@ -18,9 +20,9 @@ bun run --cwd packages/desktop build
 bun run --cwd packages/desktop pack
 ```
 
-On Windows, the unpacked app is copied to `dist/desktop/app/Aftercode Dev.exe`. Release builds should set `OPENCODE_CHANNEL=prod` and provide an `AFTERCODE_UPDATE_URL` pointing to an Aftercode-owned generic update feed. Without that variable, updater checks safely return no update; Aftercode does not query or install OpenCode releases.
+On Windows, the unpacked app is copied to `dist/desktop/app/Aftercode Dev.exe`. Release builds should set `OPENCODE_CHANNEL=prod` and provide `AFTERCODE_UPDATE_URL` for an Aftercode update feed. Without that variable, automatic updates stay disabled.
 
 ## Source and licensing
 
-The original OpenCode MIT license and copyright notices remain in [LICENSE](LICENSE). Preserve them in source distributions and installers. OpenCode and OpenCode Console names remain only where they identify the upstream runtime, provider, source project or legal notices. Aftercode uses separate app identifiers and icons.
+The upstream MIT license and copyright notices remain in [LICENSE](LICENSE). Preserve them in source distributions and installers. Aftercode uses its own app name, icons, and identifiers.
 
