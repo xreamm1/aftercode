@@ -145,7 +145,7 @@ export function NewSessionWordmark(props: {
  * out on a stretchy neck; pull far enough and that pin triggers an elastic 3D pull-wave across the wordmark.
  * Dragging the lodger back into the "e" hole reels all the pins back into the flat wordmark.
  */
-function WordmarkLodger(props: {
+export function WordmarkLodger(props: {
   box: HTMLDivElement
   sound: () => boolean
   onOpen: () => void
