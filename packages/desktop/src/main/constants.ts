@@ -9,7 +9,7 @@ export const CHANNEL: Channel = raw === "local" || raw === "dev" || raw === "bet
 export const VERSION = app.isPackaged ? app.getVersion() : (process.env.OPENCODE_VERSION ?? app.getVersion())
 
 const appNames: Record<string, string> = {
-  dev: "Aftercode Dev",
+  dev: "Aftercode",
   beta: "Aftercode Beta",
   prod: "Aftercode",
 }
@@ -21,6 +21,6 @@ const appIDs: Record<string, string> = {
 }
 
 // Local renderer/server mode keeps the dev application identity.
-export const APP_NAME = app.isPackaged ? appNames[CHANNEL] : "Aftercode Dev"
+export const APP_NAME = appNames[CHANNEL]
 
 export const APP_ID = app.isPackaged ? appIDs[CHANNEL] : "com.aftercode.desktop.dev"

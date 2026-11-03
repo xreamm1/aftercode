@@ -1,0 +1,19 @@
+{
+  "name": "@aftercode/android",
+  "private": true,
+  "version": "0.1.1",
+  "type": "module",
+  "scripts": {
+    "build:web": "bun --env-file=.env.android run --cwd ../app build",
+    "cap:add": "bun x cap add android",
+    "cap:sync": "bun run build:web && bun x cap sync android",
+    "apk": "bun run cap:sync && bun run build-apk.ts"
+  },
+  "dependencies": {
+    "@capacitor/android": "8.6.0",
+    "@capacitor/core": "8.6.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "8.6.0"
+  }
+}

@@ -215,7 +215,7 @@ export function getConfig() {
       return {
         ...base,
         appId,
-        productName: "Aftercode Dev",
+        productName: "Aftercode",
         ...(publish ? { publish } : {}),
         deb: { fpm: [...previewCompressionFpm("deb"), metainfoFpm(appId)] },
         rpm: {

@@ -563,10 +563,10 @@ async function mainBootTiming() {
 function defaultExe() {
   const unpacked = join(packageDir, "dist", process.platform === "win32" ? "win-unpacked" : process.platform === "darwin" ? "mac" : "linux-unpacked")
 
-  if (!existsSync(unpacked)) return join(unpacked, "Aftercode Dev.exe")
+  if (!existsSync(unpacked)) return join(unpacked, "Aftercode.exe")
   const candidate = readdirSync(unpacked).find((f) => (process.platform === "win32" ? f.endsWith(".exe") : f.endsWith(".app") || !f.includes(".")))
 
-  return join(unpacked, candidate ?? "Aftercode Dev.exe")
+  return join(unpacked, candidate ?? "Aftercode.exe")
 }
 
 function appIdFor(executable: string) {

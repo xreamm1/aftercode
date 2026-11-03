@@ -1,5 +1,5 @@
 ; electron-builder names a one-click per-user install directory after the package name, which every
-; channel shares, so Aftercode, Aftercode Beta and Aftercode Dev all installed into one "@aftercodedesktop"
+; channel shares, so Aftercode and Aftercode Beta install into one "@aftercodedesktop"
 ; directory and each channel's installer and uninstaller replaced or deleted the others' files.
 ; Each channel now installs into a directory named after its app ID, like its data directory.
 ; Only the installer moves, and NSIS rejects a variable that the uninstaller build never sets.

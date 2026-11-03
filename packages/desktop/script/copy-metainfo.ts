@@ -6,7 +6,7 @@ const channel = arg === "dev" || arg === "beta" || arg === "prod" ? arg : resolv
 
 const appId = channel === "prod" ? "com.aftercode.desktop" : `com.aftercode.desktop.${channel}`
 
-const productName = channel === "prod" ? "Aftercode" : `Aftercode ${channel.charAt(0).toUpperCase() + channel.slice(1)}`
+const productName = channel === "beta" ? "Aftercode Beta" : "Aftercode"
 
 const summary = `Open source AI coding agent${channel !== "prod" ? ` (${channel})` : ""}`
 

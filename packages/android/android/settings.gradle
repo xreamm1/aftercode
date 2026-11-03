@@ -1,0 +1,9 @@
+include ':app'
+include ':capacitor-cordova-android-plugins'
+project(':capacitor-cordova-android-plugins').projectDir = new File('./capacitor-cordova-android-plugins/')
+
+gradle.beforeProject { project ->
+    project.buildscript.repositories.maven { url 'https://maven.aliyun.com/repository/google' }
+}
+
+apply from: 'capacitor.settings.gradle'
