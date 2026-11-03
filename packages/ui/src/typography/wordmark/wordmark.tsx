@@ -12,7 +12,11 @@ export function Wordmark(
       src={aftercodeWordmark}
       alt="Aftercode"
       class={props.class}
-      style={{ opacity: opacity(), ...props.style }}
+      style={
+        typeof props.style === "string"
+          ? `${props.style}; opacity: ${opacity()}`
+          : { ...(props.style ?? {}), opacity: opacity() }
+      }
     />
   )
 }
