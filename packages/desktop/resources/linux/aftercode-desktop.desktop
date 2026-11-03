@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Aftercode
+Exec=/opt/Aftercode/com.aftercode.desktop %U
+Terminal=false
+Type=Application
+Icon=com.aftercode.desktop
+StartupWMClass=com.aftercode.desktop
+NoDisplay=true
+Comment=Open source AI coding agent
+Categories=Development;

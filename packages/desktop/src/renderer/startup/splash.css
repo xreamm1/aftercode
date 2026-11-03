@@ -1,0 +1,27 @@
+[data-component="first-launch-splash"] img {
+  animation: first-launch-wordmark-reveal 1000ms ease-out both;
+}
+
+[data-component="first-launch-splash"][data-drawing="pending"] img {
+  animation-play-state: paused;
+}
+
+[data-component="first-launch-splash"] img {
+  clip-path: inset(0 100% 0 0);
+}
+
+@keyframes first-launch-wordmark-reveal {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-component="first-launch-splash"] img {
+    animation: none;
+    clip-path: none;
+  }
+}
